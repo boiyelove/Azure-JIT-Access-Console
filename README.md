@@ -41,6 +41,14 @@ tests cannot claim a live cloud change occurred.
 
 The upper boundary names the principal services and technologies used by this repository. The lower boundary shows the implemented control flow: desired state is validated, provider action remains an explicit integration gate, and sanitized evidence is retained for review and deterministic replay.
 
+## Best complementary diagram
+
+**Recommended view: Just-in-time privileged-access sequence diagram.** A sequence view is the strongest complement because it exposes runtime order, trust hand-offs, fail-closed decisions, and the evidence returned to the caller.
+
+![Icon-based just-in-time privileged-access sequence diagram for Azure-JIT-Access-Console](docs/operational-view.svg)
+
+The view follows **Submit privileged request → Approve and activate role → Open mediated session → Revoke and preserve audit**. Use it during design reviews, operational walkthroughs, and failure-mode discussions; use the logical architecture above when the question is which technologies integrate.
+
 ## Quickstart
 
 Requirements: Python 3.11+ and Git. No Azure credentials are required.
