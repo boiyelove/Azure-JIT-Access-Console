@@ -2,6 +2,19 @@
 
 Offer time-bound privileged access requests with approvals, traceability, and Bastion-mediated sessions.
 
+## Project metadata
+
+The metadata below is derived from tracked source, manifests, and infrastructure
+files. It describes what this repository includes; live-service integration remains
+bounded by the documented deployment and validation limitations.
+
+| Category | Included |
+| --- | --- |
+| Platforms | Microsoft Azure; GitHub Actions |
+| Services and stack | Entra PIM; Bastion; Logic Apps; Key Vault; Azure Monitor |
+| Languages and formats | Python; Bicep; Bicep parameters; Bash; JSON; YAML |
+| Delivery and IaC | Bicep + `.bicepparam`; GitHub Actions CI; YAML configuration; Python validation/tests |
+
 ## Problem statement
 
 An engineer's time-bounded access request is checked for tenant, target sensitivity, explicit approval, fresh evidence, and secretless identity before PIM/Bastion workflow adapters execute.
